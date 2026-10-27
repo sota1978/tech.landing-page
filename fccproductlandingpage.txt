@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header id="header">
+      <img id="header-img" src="https://via.placeholder.com/150" alt="Logo" />
+      <nav id="nav-bar">
+        <a class="nav-link" href="#features">Features</a>
+        <a class="nav-link" href="#how-it-works">How It Works</a>
+        <a class="nav-link" href="#pricing">Pricing</a>
+      </nav>
+    </header>
+
+    <section id="hero">
+      <h1>Custom Built. Rugged. Ready.</h1>
+      <form id="form" action="https://www.freecodecamp.com/email-submit">
+        <input
+          id="email"
+          type="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+        />
+        <input id="submit" type="submit" value="Get Started" />
+      </form>
+    </section>
+
+    <section id="features">
+      <h2>Features</h2>
+      <ul>
+        <li>Vintage looks, modern guts</li>
+        <li>Hand-crafted detail</li>
+        <li>Battle-tested performance</li>
+      </ul>
+    </section>
+
+    <section id="how-it-works">
+      <h2>How It Works</h2>
+      <iframe
+        id="video"
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/tgbNymZ7vqY"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+    </section>
+
+    <section id="pricing">
+      <h2>Pricing</h2>
+      <div class="pricing-container">
+        <div class="pricing-box">
+          <h3>Base</h3>
+          <p>$999</p>
+        </div>
+        <div class="pricing-box">
+          <h3>Pro</h3>
+          <p>$1499</p>
+        </div>
+        <div class="pricing-box">
+          <h3>Elite</h3>
+          <p>$1999</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 Custom Machines Inc.</p>
+    </footer>
+  </body>
+</html>
+CSS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  background: #222;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+#header-img {
+  height: 50px;
+}
+
+#nav-bar a {
+  color: #fff;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+
+#hero {
+  margin-top: 100px;
+  text-align: center;
+  padding: 2rem;
+}
+
+form {
+  margin-top: 1rem;
+}
+
+input[type="email"],
+input[type="submit"] {
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+#features,
+#how-it-works,
+#pricing {
+  padding: 2rem;
+  text-align: center;
+}
+
+.pricing-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pricing-box {
+  border: 1px solid #aaa;
+  padding: 1rem;
+  margin: 1rem;
+  width: 200px;
+}
+
+footer {
+  background: #eee;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .pricing-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #nav-bar {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #nav-bar a {
+    margin: 0.5rem 0;
+  }
+}
